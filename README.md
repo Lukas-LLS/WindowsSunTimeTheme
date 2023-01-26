@@ -27,6 +27,9 @@ if (Get-ScheduledTask -TaskName "Sunrise Sunset Task") {
 ```
 ## Troubleshooting
 
+If you see an error at line 46, you can disregard it.
+It is intended to happen either if the script is executed for the first time or when no new task was scheduled.
+
 If you get an error message like the following, you have to change the execution policy of your user profile.
 ```
 .\WindowsSunTimeTheme.ps1: File C:\Users\...\WindowsSunTimeTheme.ps1 cannot be loaded because running scripts is disabled on this system. For more information, see about_Execution_Policies at https://go.microsoft.com/fwlink/?LinkID=135170.
