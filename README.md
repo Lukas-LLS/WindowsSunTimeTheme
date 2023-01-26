@@ -9,7 +9,7 @@ If you experience any issues regarding the script, please open an issue on the [
 
 For the script to function properly, it must be added to the auto start directory in windows. This can be accomplished by the following command.
 ```powershell
-Invoke-WebRequest -Uri "https://raw.githubusercontent.com/Lukas-LLS/WindowsSunTimeTheme/master/WindowsSunTimeTheme.ps1" -OutFile "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Startup\WindowsSunTimeTheme.ps1" -Force
+Invoke-WebRequest -Uri "https://raw.githubusercontent.com/Lukas-LLS/WindowsSunTimeTheme/master/WindowsSunTimeTheme.ps1" -OutFile "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Startup\WindowsSunTimeTheme.ps1"
 ```
 After executing this command, you have to restart your machine to order for the script to be started.
 If you do not want to restart your machine, you can also use the following command to start it manually for the first time.
