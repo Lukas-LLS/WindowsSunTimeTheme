@@ -30,6 +30,8 @@ if (Get-ScheduledTask -TaskName "Sunrise Sunset Task") {
 If you see an error at line 46, you can disregard it.
 It is intended to happen either if the script is executed for the first time or when no new task was scheduled.
 
+---
+
 If you get an error message like the following, you have to change the execution policy of your user profile.
 ```
 .\WindowsSunTimeTheme.ps1: File C:\Users\...\WindowsSunTimeTheme.ps1 cannot be loaded because running scripts is disabled on this system. For more information, see about_Execution_Policies at https://go.microsoft.com/fwlink/?LinkID=135170.
@@ -40,3 +42,14 @@ To enable the execution of scripts, you must run the following command.
 ```powershell
 Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope CurrentUser
 ```
+
+---
+
+If upon machine restart the script does open in notepad instead of executing in PowerShell, you need to change the default program that is used when start .ps1 files
+This can be achieved by the following steps.
+1. Press WIN + R
+2. Enter shell:startup
+3. Right click on the script file
+4. In the menu that opens, select *open with*
+5. Select the PowerShell executable (If it is not listed go to the executable file selection in the bottom of the menu. The usual path of the executable is "C:\Program Files\PowerShell\7\pwsh.exe")
+6. Finally select *always*
