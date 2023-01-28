@@ -1,7 +1,6 @@
 # Get the current location of the machine
 $ipInfo = Invoke-RestMethod -Uri "https://ipinfo.io/json"
-$data = $ipInfo.Content | ConvertFrom-Json
-$loc = $data.loc -split ","
+$loc = $ipInfo.loc -split ","
 $lat = $loc[0]
 $lon = $loc[1]
 
