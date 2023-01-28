@@ -1,7 +1,9 @@
 # Get the current location of the machine
 $ipInfo = Invoke-RestMethod -Uri "https://ipinfo.io/json"
-$lat = $ipInfo.lat
-$lon = $ipInfo.lon
+$data = $ipInfo.Content | ConvertFrom-Json
+$loc = $data.loc -split ","
+$lat = $loc[0]
+$lon = $loc[1]
 
 # Get the current time
 $now = (Get-Date).ToUniversalTime()
